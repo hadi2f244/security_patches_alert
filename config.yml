@@ -1,0 +1,3 @@
+scripts:
+  - name: new_security_updates
+    command: /opt/new_security_updates.sh

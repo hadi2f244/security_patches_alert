@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  script_exporter:
+    image: ricoberger/script_exporter:dev
+    privileged: true
+    network_mode: "host"
+    restart: unless-stopped
+    command: -config.file /opt/config.yml
+    volumes:
+      - '/var/cache/apt/:/var/cache/apt/'
+      # - '/proc:/host/proc:ro'
+      # - '/sys:/host/sys:ro'
+      # - '/:/rootfs:ro'
+      # - '/:/host:ro,rslave'
+      - '/etc/apt:/etc/apt:ro'
+      - '.:/opt'
+
+

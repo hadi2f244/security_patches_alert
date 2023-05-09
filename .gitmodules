@@ -1,0 +1,3 @@
+[submodule "script_exporter.proj"]
+	path = script_exporter.proj
+	url = https://github.com/ricoberger/script_exporter
